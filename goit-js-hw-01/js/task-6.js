@@ -14,4 +14,3 @@ total = +total + +input;
 } while(input != null) {
   alert(`Общая сумма чисел равна ${total}`);
 }
-console.log(total);
