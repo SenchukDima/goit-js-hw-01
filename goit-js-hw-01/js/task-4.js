@@ -7,15 +7,18 @@ const whatTheQuantityDroids = prompt('Какое количество дроид
 
 if (whatTheQuantityDroids === null) {
     alert('Отменено пользователем!');
-} else{
-    totalPrice = credits - (pricePerDroid * whatTheQuantityDroids);
+ } else if(isNaN(whatTheQuantityDroids)) {
+    alert('Было введено не число!');
+    } 
+else{
+    totalPrice = pricePerDroid * whatTheQuantityDroids;
+};
+if (totalPrice > credits) {
+    alert('Недостаточно средств на счету!');
+} else if(whatTheQuantityDroids !== null && whatTheQuantityDroids !== '' && !isNaN(whatTheQuantityDroids)) {
+    alert(`Вы купили ${whatTheQuantityDroids} дроидов, на счету осталось ${credits - totalPrice} кредитов.`)
 }
 
-if (totalPrice < 0) {
-    alert('Недостаточно средств на счету!');
-} else {
-    alert(`Вы купили ${whatTheQuantityDroids} дроидов, на счету осталось ${totalPrice} кредитов.`)
-}
 
 
 

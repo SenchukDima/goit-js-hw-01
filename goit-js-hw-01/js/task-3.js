@@ -13,4 +13,6 @@ if(writeYourPassword === null) {
     message = 'Доступ запрещен, неверный пароль!';
 }
 
+alert(message);
+
 

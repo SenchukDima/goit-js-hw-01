@@ -1,8 +1,8 @@
 'use strict'
 let cost;
 const enterCountryName = prompt('Введите название страны:');
-const fixCountryName = enterCountryName.charAt(0).toUpperCase() + enterCountryName.substr(1).toLowerCase();
-
+if (enterCountryName !== null) {
+const fixCountryName = enterCountryName.charAt(0).toUpperCase() + enterCountryName.substr(1).toLowerCase(); 
 switch (fixCountryName) {
     case 'Китай':
       cost = 100;
@@ -28,7 +28,10 @@ switch (fixCountryName) {
       cost = 120;
       alert(`Доставка в ${fixCountryName} будет стоить ${cost} кредитов`);
       break;
-    
+
     default:
      alert('В вашей стране доставка не доступна');
     }
+}  else {
+  alert('Отменено пользователем');
+} 
